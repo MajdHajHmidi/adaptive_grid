@@ -1,39 +1,66 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# responsive_layout_grid
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+A lightweight Flutter widget that turns a list of widgets into a responsive grid layout using `flutter_layout_grid`. It automatically adjusts the number of columns based on screen width, a minimum item width, and configurable spacing.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
+Supports both regular and sliver-based grids out of the box.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+---
 
-## Features
+## ✨ Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Fully responsive layout using `minimumItemWidth`
+- Auto-calculated column count and row sizes
+- Configurable `horizontalSpacing` and `verticalSpacing`
+- Optional `SliverToBoxAdapter` support via `.sliver` constructor
+- Built on top of the powerful `flutter_layout_grid`
 
-## Getting started
+---
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## 🚀 Getting Started
 
-## Usage
+Add this to your `pubspec.yaml`:
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  responsive_layout_grid:
 ```
 
-## Additional information
+Import it in your Dart code:
+```dart
+import 'package:responsive_layout_grid/responsive_layout_grid.dart';
+```
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+## 📦 Usage
+### Regular grid
+```dart
+ResponsiveGrid(
+  itemCount: items.length,
+  minimumItemWidth: 200,
+  horizontalSpacing: 16,
+  verticalSpacing: 24,
+  itembuilder: (context, index) => ItemCard(data: items[index]),
+)
+```
+
+### Sliver grid (inside a CustomScrollView)
+```dart
+CustomScrollView(
+  slivers: [
+    ResponsiveGrid.sliver(
+      itemCount: items.length,
+      minimumItemWidth: 250,
+      horizontalSpacing: 16,
+      verticalSpacing: 24,
+      itembuilder: (context, index) => ItemCard(data: items[index]),
+    ),
+  ],
+)
+```
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 🙌 Contributing
+
+Pull requests and issues are welcome! Feel free to suggest improvements or features.
