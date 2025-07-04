@@ -12,6 +12,7 @@ class AdaptiveGrid extends StatelessWidget {
   final bool disableStretch;
   final double verticalSpacing;
   final double horizontalSpacing;
+  final TextDirection? textDirection;
 
   final bool _sliver;
 
@@ -23,6 +24,7 @@ class AdaptiveGrid extends StatelessWidget {
     this.disableStretch = false,
     this.verticalSpacing = 0,
     this.horizontalSpacing = 0,
+    this.textDirection,
   }) : _sliver = false;
 
   const AdaptiveGrid.sliver({
@@ -33,6 +35,7 @@ class AdaptiveGrid extends StatelessWidget {
     this.disableStretch = false,
     this.verticalSpacing = 0,
     this.horizontalSpacing = 0,
+    this.textDirection,
   }) : _sliver = true;
 
   @override
@@ -59,6 +62,7 @@ class AdaptiveGrid extends StatelessWidget {
       rowSizes: List.filled(rowCount, auto),
       columnGap: horizontalSpacing,
       rowGap: verticalSpacing,
+      textDirection: textDirection,
       children: [
         ...List.generate(itemCount, (index) => itembuilder(context, index)),
         if (disableStretch && itemCount < maxCrossAxisCount)

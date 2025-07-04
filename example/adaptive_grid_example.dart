@@ -10,12 +10,14 @@ class BlogsGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AdaptiveGrid.sliver(
+    return AdaptiveGrid(
       itemCount: blogs.length,
       itembuilder: (context, index) => BlogTile(blog: blogs[index]),
       minimumItemWidth: 300,
       verticalSpacing: 16,
       horizontalSpacing: 16,
+      disableStretch: false,
+      textDirection: TextDirection.ltr,
     );
   }
 }

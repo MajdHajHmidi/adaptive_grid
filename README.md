@@ -33,7 +33,7 @@ import 'package:responsive_layout_grid/responsive_layout_grid.dart';
 ## 📦 Usage
 ### Regular grid
 ```dart
-ResponsiveGrid(
+AdaptiveGrid(
   itemCount: items.length,
   minimumItemWidth: 200,
   horizontalSpacing: 16,
@@ -46,7 +46,7 @@ ResponsiveGrid(
 ```dart
 CustomScrollView(
   slivers: [
-    ResponsiveGrid.sliver(
+    AdaptiveGrid.sliver(
       itemCount: items.length,
       minimumItemWidth: 250,
       horizontalSpacing: 16,

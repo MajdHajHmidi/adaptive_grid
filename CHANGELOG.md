@@ -5,3 +5,8 @@
 ## 1.0.1
 
 - Added maximum item width option
+
+## 1.0.2
+
+- Remove maximum item width option
+- Replaced with `disableStretch` option to replicate the behavior
