@@ -1,6 +1,6 @@
 name: adaptive_grid
 description: A lightweight Flutter package that creates fully responsive, dynamic grids.
-version: 1.0.2
+version: 1.0.3
 repository: https://github.com/MajdHajHmidi/adaptive_grid.git
 homepage: https://github.com/MajdHajHmidi/adaptive_grid
 
