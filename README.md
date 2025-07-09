@@ -1,8 +1,15 @@
-# responsive_layout_grid
+# adaptive_grid
 
 A lightweight Flutter widget that turns a list of widgets into a responsive grid layout using `flutter_layout_grid`. It automatically adjusts the number of columns based on screen width, a minimum item width, and configurable spacing.
 
 Supports both regular and sliver-based grids out of the box.
+
+---
+
+## 👀 Preview
+![Sample 1](https://raw.githubusercontent.com/MajdHajHmidi/adaptive_grid/master/example/Adaptive%20Grid%20-%20Blogs.gif)
+
+![Sample 2](https://raw.githubusercontent.com/MajdHajHmidi/adaptive_grid/master/example/Adaptive%20Grid%20-%20Products.gif)
 
 ---
 
