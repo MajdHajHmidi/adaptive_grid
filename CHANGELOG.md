@@ -12,4 +12,7 @@
 - Replaced with `disableStretch` option to replicate the behavior
 
 ## 1.0.3
-- Updated REAME.md file with proper information and visual examples
+- Updated README.md file with proper information and visual examples
+
+## 1.0.4
+- Updated README.md file with proper installing instructions
