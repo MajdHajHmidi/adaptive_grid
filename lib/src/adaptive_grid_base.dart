@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_layout_grid/flutter_layout_grid.dart';
 
 class AdaptiveGrid extends StatelessWidget {
-  final Widget Function(BuildContext context, int index) itembuilder;
+  final Widget Function(BuildContext context, int index) itemBuilder;
   final int itemCount;
   final double minimumItemWidth;
 
@@ -19,7 +19,7 @@ class AdaptiveGrid extends StatelessWidget {
   const AdaptiveGrid({
     super.key,
     required this.itemCount,
-    required this.itembuilder,
+    required this.itemBuilder,
     required this.minimumItemWidth,
     this.disableStretch = false,
     this.verticalSpacing = 0,
@@ -30,7 +30,7 @@ class AdaptiveGrid extends StatelessWidget {
   const AdaptiveGrid.sliver({
     super.key,
     required this.itemCount,
-    required this.itembuilder,
+    required this.itemBuilder,
     required this.minimumItemWidth,
     this.disableStretch = false,
     this.verticalSpacing = 0,
@@ -64,7 +64,7 @@ class AdaptiveGrid extends StatelessWidget {
       rowGap: verticalSpacing,
       textDirection: textDirection,
       children: [
-        ...List.generate(itemCount, (index) => itembuilder(context, index)),
+        ...List.generate(itemCount, (index) => itemBuilder(context, index)),
         if (disableStretch && itemCount < maxCrossAxisCount)
           ...List.generate(
             maxCrossAxisCount - itemCount,

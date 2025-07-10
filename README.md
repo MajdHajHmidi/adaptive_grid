@@ -29,12 +29,12 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  responsive_layout_grid:
+  adaptive_grid:
 ```
 
 Import it in your Dart code:
 ```dart
-import 'package:responsive_layout_grid/responsive_layout_grid.dart';
+import 'package:adaptive_grid/adaptive_grid.dart';
 ```
 
 ## 📦 Usage
@@ -45,7 +45,7 @@ AdaptiveGrid(
   minimumItemWidth: 200,
   horizontalSpacing: 16,
   verticalSpacing: 24,
-  itembuilder: (context, index) => ItemCard(data: items[index]),
+  itemBuilder: (context, index) => ItemCard(data: items[index]),
 )
 ```
 
@@ -58,7 +58,7 @@ CustomScrollView(
       minimumItemWidth: 250,
       horizontalSpacing: 16,
       verticalSpacing: 24,
-      itembuilder: (context, index) => ItemCard(data: items[index]),
+      itembBilder: (context, index) => ItemCard(data: items[index]),
     ),
   ],
 )

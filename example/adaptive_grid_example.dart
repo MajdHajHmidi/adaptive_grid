@@ -12,7 +12,7 @@ class BlogsGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return AdaptiveGrid(
       itemCount: blogs.length,
-      itembuilder: (context, index) => BlogTile(blog: blogs[index]),
+      itemBuilder: (context, index) => BlogTile(blog: blogs[index]),
       minimumItemWidth: 300,
       verticalSpacing: 16,
       horizontalSpacing: 16,
